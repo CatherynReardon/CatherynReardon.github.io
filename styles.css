@@ -6,7 +6,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
 header {
     background: linear-gradient(135deg, #8C1D40, #5C0A21);
     color: white;
@@ -19,20 +18,25 @@ header {
     margin: 0 auto;
 }
 
+h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
 .subtitle {
     font-size: 1.1rem;
-    margin-top: 10px;
+    margin: 10px 0;
     color: #f2f2f2;
 }
 
-/* SECTIONS */
 section {
     background-color: white;
     margin: 30px auto;
     padding: 30px;
     border-radius: 10px;
     max-width: 900px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
@@ -40,7 +44,10 @@ h2 {
     color: #8C1D40;
 }
 
-/* LISTS */
+p {
+    margin-top: 0;
+}
+
 ul {
     padding-left: 20px;
 }
@@ -49,7 +56,46 @@ li {
     margin-bottom: 10px;
 }
 
-/* FOOTER */
+.button {
+    display: inline-block;
+    background-color: #FFC627;
+    color: #1f1f1f;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.graphic-wrap {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.guidelines-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.button-row {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.caption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #777;
+}
+
 footer {
     text-align: center;
     padding: 25px;
@@ -57,10 +103,13 @@ footer {
     color: #777;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     header {
         padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 
     section {
