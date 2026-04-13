@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
 }
 
+/* HEADER */
 header {
     background: linear-gradient(135deg, #8C1D40, #5C0A21);
     color: white;
@@ -30,24 +31,32 @@ h1 {
     color: #f2f2f2;
 }
 
+/* MAKE HEADER LINKS VISIBLE */
+header a {
+    color: white;
+}
+
+/* SECTIONS */
 section {
     background-color: white;
     margin: 30px auto;
     padding: 30px;
     border-radius: 10px;
     max-width: 900px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 h2 {
     margin-top: 0;
     color: #8C1D40;
+    font-size: 1.8rem;
 }
 
 p {
     margin-top: 0;
 }
 
+/* LISTS */
 ul {
     padding-left: 20px;
 }
@@ -56,6 +65,7 @@ li {
     margin-bottom: 10px;
 }
 
+/* BUTTONS */
 .button {
     display: inline-block;
     background-color: #FFC627;
@@ -71,24 +81,28 @@ li {
     opacity: 0.9;
 }
 
+/* GRAPHIC */
 .graphic-wrap {
     text-align: center;
     margin-top: 30px;
 }
 
 .guidelines-image {
-    max-width: 100%;
+    max-width: 600px;   /* controls size */
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
 }
 
+/* DOWNLOAD BUTTON ALIGNMENT */
 .button-row {
     text-align: center;
     margin-top: 20px;
 }
 
+/* CAPTION */
 .caption {
     text-align: center;
     font-size: 14px;
@@ -96,6 +110,7 @@ li {
     color: #777;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
@@ -103,6 +118,7 @@ footer {
     color: #777;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     header {
         padding: 40px 15px;
