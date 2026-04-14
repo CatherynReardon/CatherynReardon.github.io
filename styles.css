@@ -1,417 +1,46 @@
-:root {
-  --asu-maroon: #8c1d40;
-  --asu-gold: #ffc627;
-  --deep-maroon: #3f0d1f;
-  --near-black: #080608;
-  --soft-white: #f8f5f2;
-  --muted-text: #ddd3cc;
-  --glass-bg: rgba(255, 255, 255, 0.07);
-  --glass-border: rgba(255, 198, 39, 0.22);
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--soft-white);
-  background: linear-gradient(135deg, var(--deep-maroon) 0%, #18070f 45%, var(--near-black) 100%);
-  line-height: 1.6;
-  position: relative;
-  overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.page-bg::before,
-.page-bg::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.page-bg::before {
-  background:
-    radial-gradient(circle at 15% 20%, rgba(255, 198, 39, 0.10), transparent 20%),
-    radial-gradient(circle at 85% 15%, rgba(140, 29, 64, 0.22), transparent 25%),
-    radial-gradient(circle at 70% 70%, rgba(255, 198, 39, 0.05), transparent 22%);
-}
-
-.page-bg::after {
-  background-image:
-    linear-gradient(rgba(255, 198, 39, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 198, 39, 0.06) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
-  opacity: 0.22;
-}
-
-.hero {
-  position: relative;
-  padding: 70px 20px 40px;
-  z-index: 1;
-}
-
-.vector-lines {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 198, 39, 0.20) 0 2px, transparent 3px),
-    radial-gradient(circle at 70% 20%, rgba(255, 198, 39, 0.20) 0 2px, transparent 3px),
-    radial-gradient(circle at 80% 65%, rgba(255, 198, 39, 0.18) 0 2px, transparent 3px),
-    radial-gradient(circle at 30% 75%, rgba(255, 198, 39, 0.18) 0 2px, transparent 3px);
-  z-index: 0;
-}
-
-.vector-lines::before,
-.vector-lines::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-}
-
-.vector-lines::before {
-  background-image:
-    linear-gradient(120deg, transparent 0%, transparent 38%, rgba(255, 198, 39, 0.26) 39%, transparent 40%),
-    linear-gradient(20deg, transparent 0%, transparent 60%, rgba(255, 198, 39, 0.18) 61%, transparent 62%),
-    linear-gradient(165deg, transparent 0%, transparent 48%, rgba(255, 198, 39, 0.16) 49%, transparent 50%);
-}
-
-.vector-lines::after {
-  background-image:
-    linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 198, 39, 0.10) 31%, transparent 32%),
-    linear-gradient(135deg, transparent 0%, transparent 75%, rgba(255, 198, 39, 0.12) 76%, transparent 77%);
-}
-
-.glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow);
-}
-
-.hero-card {
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;
-  margin: 0 auto;
-  border-radius: 28px;
-  padding: 36px;
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 32px;
-  align-items: center;
-}
-
-.hero-left {
-  text-align: center;
+header {
+    background-color: #8c1d40;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .profile-photo {
-  width: 210px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--asu-gold);
-  box-shadow: 0 0 30px rgba(255, 198, 39, 0.25);
-}
-
-.eyebrow {
-  color: var(--asu-gold);
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 0.85rem;
-  margin-bottom: 8px;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 1.1;
-  margin: 0 0 14px;
-  color: var(--soft-white);
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 .subtitle {
-  margin: 4px 0;
-  color: var(--muted-text);
-  font-size: 1.05rem;
-}
-
-.hero-statement {
-  margin-top: 22px;
-  max-width: 720px;
-  font-size: 1.15rem;
-  color: #fff3dd;
-}
-
-.hero-buttons {
-  margin-top: 26px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.25s ease;
-}
-
-.button.primary {
-  background: var(--asu-gold);
-  color: #2a1600;
-}
-
-.button.primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(255, 198, 39, 0.22);
-}
-
-.button.secondary {
-  border: 1px solid rgba(255, 198, 39, 0.4);
-  color: var(--soft-white);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.button.secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+    margin: 5px 0;
 }
 
 main {
-  position: relative;
-  z-index: 1;
-  padding: 10px 20px 60px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-.content-section {
-  max-width: 1100px;
-  margin: 28px auto;
-  padding: 30px;
-  border-radius: 24px;
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 h2 {
-  margin-top: 0;
-  color: var(--asu-gold);
-  font-size: 1.8rem;
-}
-
-.section-intro {
-  margin-bottom: 28px;
-}
-
-.card-grid {
-  max-width: 1100px;
-  margin: 28px auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-}
-
-.mini-card {
-  text-decoration: none;
-  color: var(--soft-white);
-  border-radius: 20px;
-  padding: 22px 18px;
-  min-height: 110px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 8px;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.mini-card:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.icon {
-  font-size: 1.4rem;
-  color: var(--asu-gold);
-}
-
-.haiml-section {
-  overflow: hidden;
-}
-
-.haiml-visual {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 28px;
-  align-items: center;
-  margin-top: 26px;
-}
-
-.haiml-circles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 420px;
-  position: relative;
-}
-
-.circle {
-  border-radius: 50%;
-  border: 2px solid rgba(255, 198, 39, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  color: var(--soft-white);
-  font-weight: 600;
-  box-shadow: inset 0 0 40px rgba(255, 198, 39, 0.05);
-}
-
-.outer {
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(255, 198, 39, 0.12), rgba(140, 29, 64, 0.14));
-}
-
-.middle {
-  width: 290px;
-  height: 290px;
-  background: radial-gradient(circle, rgba(255, 198, 39, 0.10), rgba(140, 29, 64, 0.10));
-}
-
-.inner {
-  width: 170px;
-  height: 170px;
-  background: radial-gradient(circle, rgba(255, 198, 39, 0.08), rgba(140, 29, 64, 0.08));
-}
-
-.outer > span,
-.middle > span,
-.inner > span {
-  position: absolute;
-  padding: 0 12px;
-  max-width: 80%;
-}
-
-.outer > span {
-  top: 54px;
-}
-
-.middle > span {
-  top: 40px;
-}
-
-.inner > span {
-  top: 56px;
-}
-
-.level-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.level-box {
-  border-radius: 18px;
-  padding: 18px 20px;
-  color: var(--soft-white);
-  font-weight: 600;
-}
-
-.clean-list {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.clean-list li {
-  margin-bottom: 12px;
-}
-
-a {
-  color: var(--asu-gold);
-}
-
-a:hover {
-  opacity: 0.9;
+    color: #8c1d40;
 }
 
 footer {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 22px 20px 40px;
-  color: #d1c2b5;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 950px) {
-  .hero-card {
-    grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .haiml-visual {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero {
-    padding-top: 40px;
-  }
-
-  .hero-card,
-  .content-section {
-    padding: 22px;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .profile-photo {
-    width: 170px;
-    height: 170px;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .outer {
-    width: 300px;
-    height: 300px;
-  }
-
-  .middle {
-    width: 210px;
-    height: 210px;
-  }
-
-  .inner {
-    width: 120px;
-    height: 120px;
-  }
-
-  .haiml-circles {
-    min-height: 320px;
-  }
+    padding: 15px;
+    background: #ddd;
 }
