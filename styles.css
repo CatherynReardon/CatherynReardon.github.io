@@ -1,14 +1,14 @@
 /* GLOBAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.6;
     color: #222;
     background-color: #f5f6f8;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 a {
@@ -237,6 +237,44 @@ section {
     word-break: break-word;
 }
 
+.contact-section {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8f8f8, #f1f1f1);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 10px;
+}
+
+.contact-intro {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.contact-email {
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+.contact-email a {
+    color: #8C1D40;
+    font-weight: 500;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+.contact-buttons {
+    justify-content: center;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -281,6 +319,10 @@ footer {
     .guidelines-image {
         max-width: 420px;
     }
+
+    .contact-section {
+        padding: 24px 18px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -314,5 +356,9 @@ footer {
 
     .guidelines-image {
         max-width: 100%;
+    }
+
+    .contact-email {
+        font-size: 1rem;
     }
 }
