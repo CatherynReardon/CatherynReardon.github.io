@@ -215,11 +215,11 @@ section {
 }
 
 .haiml-image {
-    width: 100%;
-    max-width: 550px;
+    width: 460px;       /* 👈 tuned size */
+    max-width: 90%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto;
     border-radius: 10px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
@@ -337,7 +337,8 @@ footer {
     }
 
     .haiml-image {
-        max-width: 420px;
+        width: 380px;
+        max-width: 100%;
     }
 
     .contact-section {
@@ -377,6 +378,7 @@ footer {
     .guidelines-image,
     .haiml-image {
         max-width: 100%;
+        width: 100%;
     }
 
     .contact-email {
