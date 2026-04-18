@@ -27,12 +27,13 @@
     <h2>Overview</h2>
 
     <div class="haiml-image-wrapper">
-        <img
-            src="haiml-graphic.png"
-            alt="Human-Centered AI Metacognitive Learning Model framework diagram"
-            class="haiml-image clickable-image"
-            onclick="openModal()"
-        >
+        <a href="haiml-graphic.png" target="_blank" rel="noopener noreferrer" class="haiml-image-link">
+            <img
+                src="haiml-graphic.png"
+                alt="Human-Centered AI Metacognitive Learning Model framework diagram"
+                class="haiml-image"
+            >
+        </a>
         <p class="image-caption">Click the figure to enlarge.</p>
     </div>
 
@@ -150,46 +151,6 @@
 <footer>
     <p>© 2026 Catheryn Reardon, PhD. Human-Centered AI Metacognitive Learning Model (HAIML)</p>
 </footer>
-
-<!-- Image Modal -->
-<div id="imageModal" class="image-modal" aria-hidden="true">
-    <span class="close-btn" onclick="closeModal()" aria-label="Close enlarged image">&times;</span>
-    <img class="modal-content" id="modalImage" alt="Enlarged HAIML framework diagram">
-</div>
-
-<script>
-    function openModal() {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        const sourceImg = document.querySelector(".haiml-image");
-
-        modal.style.display = "block";
-        modal.setAttribute("aria-hidden", "false");
-        modalImg.src = sourceImg.src;
-        modalImg.alt = sourceImg.alt;
-        document.body.style.overflow = "hidden";
-    }
-
-    function closeModal() {
-        const modal = document.getElementById("imageModal");
-        modal.style.display = "none";
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-    }
-
-    window.addEventListener("click", function(event) {
-        const modal = document.getElementById("imageModal");
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-
-    window.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            closeModal();
-        }
-    });
-</script>
 
 </body>
 </html>
