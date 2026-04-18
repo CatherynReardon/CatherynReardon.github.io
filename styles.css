@@ -208,6 +208,22 @@ section {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
+/* HAIML GRAPHIC */
+.haiml-image-wrapper {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.haiml-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
 .caption {
     text-align: center;
     font-size: 0.95rem;
@@ -320,6 +336,10 @@ footer {
         max-width: 420px;
     }
 
+    .haiml-image {
+        max-width: 420px;
+    }
+
     .contact-section {
         padding: 24px 18px;
     }
@@ -354,7 +374,8 @@ footer {
         margin: 10px auto;
     }
 
-    .guidelines-image {
+    .guidelines-image,
+    .haiml-image {
         max-width: 100%;
     }
 
