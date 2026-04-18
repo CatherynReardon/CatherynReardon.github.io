@@ -27,7 +27,13 @@
     <h2>Overview</h2>
 
     <div class="haiml-image-wrapper">
-        <img src="haiml-graphic.png" alt="HAIML Framework Diagram" class="haiml-image">
+        <img
+            src="haiml-graphic.png"
+            alt="Human-Centered AI Metacognitive Learning Model framework diagram"
+            class="haiml-image clickable-image"
+            onclick="openModal()"
+        >
+        <p class="image-caption">Click the figure to enlarge.</p>
     </div>
 
     <div class="highlight-box haiml-glance">
@@ -131,19 +137,59 @@
     <h2>References</h2>
 
     <div class="highlight-box">
-<p>Bandura, A. (1997). <em>Self-efficacy: The exercise of control.</em> W.H. Freeman.</p>
-<p>Bandura, A. (2001). Social cognitive theory: An agentic perspective. <em>Annual Review of Psychology, 52</em>(1), 1–26.</p>
-<p>Bjork, R. A., Dunlosky, J., & Kornell, N. (2013). Self-regulated learning: Beliefs, techniques, and illusions. <em>Annual Review of Psychology, 64</em>, 417–444.</p>
-<p>Reardon, C. (2026). <em>Human-Centered AI Metacognitive Learning Model (HAIML)</em> [Figure]. AI-assisted design with human oversight.</p>
-<p>Schraw, G., & Dennison, R. S. (1994). Assessing metacognitive awareness. <em>Contemporary Educational Psychology, 19</em>(4), 460–475.</p>
-<p>Zimmerman, B. J. (2002). Becoming a self-regulated learner. <em>Theory Into Practice, 41</em>(2), 64–70.</p>
-<p>Zimmerman, B. J. (2008). Investigating self-regulation and motivation. <em>American Educational Research Journal, 45</em>(1), 166–183.</p>
+        <p>Bandura, A. (1997). <em>Self-efficacy: The exercise of control.</em> W.H. Freeman.</p>
+        <p>Bandura, A. (2001). Social cognitive theory: An agentic perspective. <em>Annual Review of Psychology, 52</em>(1), 1–26.</p>
+        <p>Bjork, R. A., Dunlosky, J., & Kornell, N. (2013). Self-regulated learning: Beliefs, techniques, and illusions. <em>Annual Review of Psychology, 64</em>, 417–444.</p>
+        <p>Reardon, C. (2026). <em>Human-Centered AI Metacognitive Learning Model (HAIML)</em> [Figure]. AI-assisted design with human oversight.</p>
+        <p>Schraw, G., & Dennison, R. S. (1994). Assessing metacognitive awareness. <em>Contemporary Educational Psychology, 19</em>(4), 460–475.</p>
+        <p>Zimmerman, B. J. (2002). Becoming a self-regulated learner. <em>Theory Into Practice, 41</em>(2), 64–70.</p>
+        <p>Zimmerman, B. J. (2008). Investigating self-regulation and motivation. <em>American Educational Research Journal, 45</em>(1), 166–183.</p>
     </div>
 </section>
 
 <footer>
     <p>© 2026 Catheryn Reardon, PhD. Human-Centered AI Metacognitive Learning Model (HAIML)</p>
 </footer>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal" aria-hidden="true">
+    <span class="close-btn" onclick="closeModal()" aria-label="Close enlarged image">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Enlarged HAIML framework diagram">
+</div>
+
+<script>
+    function openModal() {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const sourceImg = document.querySelector(".haiml-image");
+
+        modal.style.display = "block";
+        modal.setAttribute("aria-hidden", "false");
+        modalImg.src = sourceImg.src;
+        modalImg.alt = sourceImg.alt;
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    window.addEventListener("click", function(event) {
+        const modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    window.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+</script>
 
 </body>
 </html>
