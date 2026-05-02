@@ -52,18 +52,6 @@ header {
     text-align: left;
 }
 
-.home-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(77, 163, 255, 0.14) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(77, 163, 255, 0.14) 1px, transparent 1px);
-    background-size: 52px 52px;
-    opacity: 0.16;
-    pointer-events: none;
-}
-
 .hero-nav {
     position: relative;
     z-index: 2;
@@ -177,25 +165,17 @@ header {
 }
 
 .haiml-badge {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    max-width: 560px;
-    padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(47, 111, 216, 0.28);
-    border-radius: 10px;
+    border-left: 4px solid #FF6A00;
+    padding-left: 14px;
+    margin: 22px 0 24px;
+    font-weight: 600;
     color: #08245C;
     font-size: 1.05rem;
-    margin-bottom: 24px;
+    max-width: 650px;
 }
 
 .haiml-badge strong {
     color: #FF6A00;
-}
-
-.badge-icon {
-    font-size: 2rem;
 }
 
 .hero-button {
@@ -488,6 +468,7 @@ footer {
     .haiml-badge {
         margin-left: auto;
         margin-right: auto;
+        text-align: left;
     }
 }
 
@@ -517,6 +498,11 @@ footer {
     .profile-photo {
         width: 150px;
         height: 150px;
+    }
+
+    .hero-photo {
+        width: 250px;
+        height: 250px;
     }
 
     .bio-intro {
