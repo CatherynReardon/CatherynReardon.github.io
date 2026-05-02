@@ -7,28 +7,28 @@ body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.6;
-    color: #222;
-    background-color: #f5f6f8;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
 }
 
 a {
-    color: #8C1D40;
+    color: #4DA3FF;
 }
 
 a:hover {
-    color: #5f1029;
+    color: #FF6A00;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #8C1D40, #FFC627);
+    background: linear-gradient(135deg, #4DA3FF, #66C2FF);
     color: white;
     text-align: center;
     padding: 60px 20px;
 }
 
 .subpage-header {
-    background: linear-gradient(135deg, #8C1D40, #FFC627);
+    background: linear-gradient(135deg, #4DA3FF, #66C2FF);
     color: white;
     text-align: center;
     padding: 45px 20px;
@@ -46,7 +46,7 @@ header {
     object-fit: cover;
     border-radius: 50%;
     border: 6px solid white;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 18px rgba(77, 163, 255, 0.25);
     margin-bottom: 20px;
 }
 
@@ -57,14 +57,14 @@ h1 {
 }
 
 h2 {
-    color: #8C1D40;
+    color: #4DA3FF;
     margin-top: 0;
     margin-bottom: 12px;
     font-size: 1.6rem;
 }
 
 h3 {
-    color: #8C1D40;
+    color: #4DA3FF;
     margin-top: 24px;
     margin-bottom: 8px;
     font-size: 1.15rem;
@@ -86,6 +86,7 @@ li {
 .subtitle {
     margin: 6px 0;
     font-size: 1.05rem;
+    color: #E6F0FF;
 }
 
 .bio-intro {
@@ -111,12 +112,12 @@ li {
     margin: 8px 14px;
     text-decoration: none;
     font-weight: 600;
-    color: #8C1D40;
+    color: #4DA3FF;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .site-nav a:hover {
-    color: #5f1029;
+    color: #FF6A00;
     text-decoration: underline;
     transform: translateY(-1px);
 }
@@ -126,9 +127,9 @@ section {
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px 25px;
-    background-color: white;
+    background-color: #F4F9FF;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* INTRO / CARD GRID */
@@ -145,8 +146,8 @@ section {
 
 .card-link {
     display: block;
-    background-color: #fafafa;
-    border: 1px solid #e6e6e6;
+    background-color: #FFFFFF;
+    border: 1px solid #E6F0FF;
     border-radius: 12px;
     padding: 20px;
     text-decoration: none;
@@ -156,24 +157,18 @@ section {
 
 .card-link:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    border-color: #d4b3be;
-}
-
-.card-link h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+    box-shadow: 0 6px 16px rgba(77, 163, 255, 0.15);
+    border-color: #4DA3FF;
 }
 
 .card-link p {
-    margin-bottom: 0;
-    color: #444;
+    color: #5F6B7A;
 }
 
 /* BUTTONS */
 .button {
     display: inline-block;
-    background-color: #8C1D40;
+    background-color: #FF6A00;
     color: white;
     padding: 10px 18px;
     border-radius: 6px;
@@ -184,7 +179,7 @@ section {
 }
 
 .button:hover {
-    background-color: #6d1732;
+    background-color: #4DA3FF;
     color: white;
     transform: translateY(-1px);
 }
@@ -215,7 +210,7 @@ section {
 }
 
 .haiml-image {
-    width: 460px;       /* 👈 tuned size */
+    width: 460px;
     max-width: 90%;
     height: auto;
     display: block;
@@ -227,161 +222,54 @@ section {
 .caption {
     text-align: center;
     font-size: 0.95rem;
-    color: #555;
+    color: #5F6B7A;
     margin-top: 10px;
 }
 
 /* SPECIAL CONTENT BLOCKS */
 .highlight-box {
-    background-color: #faf7f8;
-    border-left: 4px solid #8C1D40;
+    background-color: #F4F9FF;
+    border-left: 4px solid #4DA3FF;
     padding: 18px;
     border-radius: 8px;
     margin-top: 20px;
 }
 
 .callout {
-    background-color: #fff9e8;
-    border: 1px solid #f0dd9a;
+    background-color: #FFF4E8;
+    border: 1px solid #FFD2A8;
     padding: 18px;
     border-radius: 8px;
     margin-top: 20px;
 }
 
 /* CONTACT SECTION */
-#contact a {
-    word-break: break-word;
-}
-
 .contact-section {
     margin-top: 40px;
     padding: 30px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #f8f8f8, #f1f1f1);
-    border: 1px solid #e0e0e0;
+    background: linear-gradient(135deg, #F4F9FF, #FFFFFF);
+    border: 1px solid #E6F0FF;
     text-align: center;
-}
-
-.contact-section h2 {
-    margin-bottom: 10px;
 }
 
 .contact-intro {
     margin-bottom: 15px;
-    color: #444;
-}
-
-.contact-email {
-    margin-bottom: 20px;
-    font-size: 1.05em;
+    color: #5F6B7A;
 }
 
 .contact-email a {
-    color: #8C1D40;
-    font-weight: 500;
-    text-decoration: none;
-    word-break: break-word;
+    color: #4DA3FF;
 }
 
 .contact-email a:hover {
-    text-decoration: underline;
-}
-
-.contact-buttons {
-    justify-content: center;
+    color: #FF6A00;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 30px 20px;
-    color: #666;
+    color: #5F6B7A;
     font-size: 0.95rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .site-nav {
-        padding: 10px 8px;
-    }
-
-    .site-nav a {
-        margin: 6px 10px;
-        font-size: 0.95rem;
-    }
-
-    section {
-        margin: 20px 14px;
-        padding: 24px 18px;
-    }
-
-    h1 {
-        font-size: 1.9rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .bio-intro {
-        font-size: 1rem;
-    }
-
-    .guidelines-image {
-        max-width: 420px;
-    }
-
-    .haiml-image {
-        width: 380px;
-        max-width: 100%;
-    }
-
-    .contact-section {
-        padding: 24px 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    header,
-    .subpage-header {
-        padding: 42px 16px;
-    }
-
-    h1 {
-        font-size: 1.7rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    .profile-photo {
-        width: 130px;
-        height: 130px;
-    }
-
-    .link-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .button {
-        display: block;
-        width: fit-content;
-        margin: 10px auto;
-    }
-
-    .guidelines-image,
-    .haiml-image {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .contact-email {
-        font-size: 1rem;
-    }
 }
