@@ -39,21 +39,21 @@ max-width: 900px;
 margin: 0 auto;
 }
 
-/* HOMEPAGE NAV LINKS (FIXED) */
+/* HOMEPAGE NAV LINKS */
 .nav-links {
 margin-top: 15px;
 }
 
-.nav-links a {
-color: #FF6A00;
+header .nav-links a {
+color: #FFFFFF;
 text-decoration: none;
-font-weight: 600;
-margin: 0 10px;
+font-weight: 700;
+margin: 0 12px;
 transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-color: #4DA3FF;
+header .nav-links a:hover {
+color: #FF6A00;
 }
 
 /* PROFILE PHOTO */
