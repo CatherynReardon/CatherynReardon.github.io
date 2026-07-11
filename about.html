@@ -63,6 +63,103 @@
     }
     </script>
 
+
+    <style>
+        .profile-graphic {
+            text-align: center;
+        }
+
+        .profile-graphic img {
+            display: block;
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+            margin: 1.5rem auto 0.75rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+            cursor: zoom-in;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .profile-graphic img:hover,
+        .profile-graphic img:focus {
+            transform: scale(1.01);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        .profile-graphic figcaption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.92);
+            overflow: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox-content {
+            display: block;
+            max-width: 96vw;
+            max-height: 92vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+            cursor: zoom-out;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 1rem;
+            right: 1.25rem;
+            width: 3rem;
+            height: 3rem;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.14);
+            color: #fff;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            background: rgba(255, 255, 255, 0.25);
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        @media (max-width: 700px) {
+            .lightbox {
+                padding: 1rem;
+            }
+
+            .lightbox-content {
+                max-width: 98vw;
+                max-height: 88vh;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -99,6 +196,31 @@
     <p>
         Catheryn is also a former K–12 high school English teacher. That experience continues to shape her emphasis on writing, communication, learner-centered pedagogy, and the development of thoughtful decision-makers. With extensive experience in online teaching, instructional design, and faculty development, she has created courses, frameworks, simulations, and instructional resources that support transparent, reflective, and educationally meaningful engagement with AI.
     </p>
+
+</section>
+
+<section class="profile-graphic">
+
+    <h2>Research, Skills, Grants, and Scholarship</h2>
+
+    <p>
+        View a one-page overview of Catheryn Reardon's research areas, publications,
+        presentations, grants, leadership, and work in human-centered artificial intelligence.
+    </p>
+
+    <figure>
+        <img
+            src="ReardonCVGraphic.png"
+            alt="One-page graphic overview of Catheryn Reardon's research, skills, grants, publications, presentations, and leadership"
+            id="researchGraphic"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="researchLightbox"
+            aria-label="Open the research graphic in a larger view"
+            loading="lazy">
+        <figcaption>Select the graphic to enlarge it.</figcaption>
+    </figure>
 
 </section>
 
@@ -242,6 +364,79 @@
 <footer>
     <p>© 2026 Catheryn Reardon, PhD</p>
 </footer>
+
+
+<div id="researchLightbox"
+     class="lightbox"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Expanded research graphic"
+     aria-hidden="true">
+
+    <button type="button"
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close expanded graphic">
+        &times;
+    </button>
+
+    <img src="ReardonCVGraphic.png"
+         alt="Expanded one-page graphic overview of Catheryn Reardon's research, skills, grants, publications, presentations, and leadership"
+         class="lightbox-content"
+         id="lightboxImage">
+</div>
+
+<script>
+    const researchGraphic = document.getElementById("researchGraphic");
+    const researchLightbox = document.getElementById("researchLightbox");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxImage = document.getElementById("lightboxImage");
+    let lastFocusedElement = null;
+
+    function openLightbox() {
+        lastFocusedElement = document.activeElement;
+        researchLightbox.classList.add("open");
+        researchLightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+        lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+        researchLightbox.classList.remove("open");
+        researchLightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
+    }
+
+    researchGraphic.addEventListener("click", openLightbox);
+
+    researchGraphic.addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox();
+        }
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxImage.addEventListener("click", closeLightbox);
+
+    researchLightbox.addEventListener("click", function(event) {
+        if (event.target === researchLightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" &&
+            researchLightbox.classList.contains("open")) {
+            closeLightbox();
+        }
+    });
+</script>
+
 
 </body>
 </html>
