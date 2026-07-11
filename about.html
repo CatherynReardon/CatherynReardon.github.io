@@ -71,8 +71,8 @@
 
         .profile-graphic img {
             display: block;
-            width: 100%;
-            max-width: 1100px;
+            width: 60%;
+            max-width: 700px;
             height: auto;
             margin: 1.5rem auto 0.75rem;
             border-radius: 10px;
@@ -112,8 +112,8 @@
 
         .lightbox-content {
             display: block;
-            max-width: 96vw;
-            max-height: 92vh;
+            max-width: 98vw;
+            max-height: 98vh;
             width: auto;
             height: auto;
             object-fit: contain;
@@ -146,6 +146,14 @@
 
         body.lightbox-open {
             overflow: hidden;
+        }
+
+        
+        @media (max-width: 900px) {
+            .profile-graphic img {
+                width:95%;
+                max-width:none;
+            }
         }
 
         @media (max-width: 700px) {
